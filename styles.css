@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(196, 196, 246); /* Nền màu tối */
+    color: #f0f0f0; /* Chữ màu sáng */
+    display: flex;
+    flex-direction: column; /* Đặt chiều dọc cho các phần tử */
+    align-items: center; /* Căn giữa các phần tử */
+    font-family: Arial, sans-serif; /* Thêm font chữ */
+    margin: 0; /* Bỏ margin mặc định */
+}
+
+h1 {
+    text-align: center; /* Căn giữa chữ "Profile" */
+    margin-top: 20px; /* Khoảng cách từ trên cùng */
+}
+
+.profile-container {
+    display: flex; /* Đặt các profile theo hàng ngang */
+    justify-content: center; /* Căn giữa các profile */
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+    width: 100%; /* Đảm bảo chứa đầy chiều rộng */
+}
+
+.profile {
+    margin: 20px; /* Khoảng cách giữa các profile */
+    text-align: center; /* Căn giữa nội dung bên trong profile */
+    flex: 1 0 30%; /* Mỗi profile chiếm tối thiểu 30% chiều rộng */
+    max-width: 250px; /* Đặt kích thước tối đa cho mỗi profile */
+}
+
+.image {
+    position: relative;
+    display: inline-block;
+}
+
+.image img {
+    border-radius: 50%; /* Tạo hình tròn cho ảnh */
+    width: 100px; /* Kích thước của ảnh hình tròn */
+    height: 100px; /* Kích thước của ảnh hình tròn */
+}
+
+.description {
+    display: none; /* Ẩn mô tả ban đầu */
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối cho mô tả */
+    color: white; /* Chữ màu trắng cho mô tả */
+    width: 100%;
+    padding: 10px;
+}
+
+.image:hover .description {
+    display: block; /* Hiển thị mô tả khi di chuột vào ảnh */
+}
+.qr-container {
+    text-align: center; /* Căn giữa hình vuông và chữ */
+    margin-top: 40px; /* Khoảng cách trên cho phần QR */
+}
+
+.qr-image {
+    width: 150px; /* Kích thước của hình vuông */
+    height: 150px; /* Kích thước của hình vuông */
+    border: 2px solid white; /* Viền trắng quanh hình vuông */
+    border-radius: 10px; /* Bo góc cho hình vuông */
+}
+
+.qr-container p {
+    color: #f0f0f0; /* Màu chữ */
+    margin-top: 10px; /* Khoảng cách giữa hình và chữ */
+}
+.profile p {
+    color: #f0f0f0; /* Màu chữ cho mã số sinh viên */
+    margin-top: 5px; /* Khoảng cách giữa mô tả và mã số sinh viên */
+}
